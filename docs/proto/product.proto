@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package product.v1;
+
+import "google/protobuf/struct.proto";
+
+option go_package = "go-gin-boilerplate/internal/features/product;product";
+
+service ProductService {
+  rpc FindAll (google.protobuf.Struct) returns (google.protobuf.Struct);
+  rpc FindByID (google.protobuf.Struct) returns (google.protobuf.Struct);
+  rpc Create (google.protobuf.Struct) returns (google.protobuf.Struct);
+  rpc Update (google.protobuf.Struct) returns (google.protobuf.Struct);
+  rpc Delete (google.protobuf.Struct) returns (google.protobuf.Struct);
+}
